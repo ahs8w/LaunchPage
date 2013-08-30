@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>LaunchPage</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
+  <head>
+    <title><%= full_title(yield(:page_title)) %></title>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <link href='http://fonts.googleapis.com/css?family=Merienda:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,300' rel='stylesheet' type='text/css'>
+    <%= csrf_meta_tags %>
+    <%= render 'layouts/shim' %>
+    <%= render 'shared/ga' %>
+  </head>
+  <body>
+    <%= render 'layouts/header' %>
+    <div class="container">
+      <div id="js_flash_messages">
+        <%= render 'shared/flash_messages' %>
+      </div>
+      <%= yield %>
+    </div>
+    <%= render 'layouts/footer' %>
+    <%= render 'shared/analytics' %>
+  </body>
 </html>
+

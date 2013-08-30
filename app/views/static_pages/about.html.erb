@@ -1,0 +1,63 @@
+<% provide(:page_title, "How it works") %>
+<h1>How it works</h1>
+
+<div class="center" id="explanation">
+  <ul id="about">
+    <li><h2>Sign up with an email address and username</h2></li>
+    <li><h2>Start exchanging thoughts</h2></li>
+    <li><h2>See other great exchanges</h2></li>
+    <li><h2>Share thoughts with your friends</h2></li>
+    <li><h2>Reward excellent responses with Bitcoin</h2></li>
+    <li><h2>Earn coin for your own great posts</h2></li>
+  </ul>
+</div>
+
+<!-- For the FAQ, we introduce a little bit of JS, using the accordion. -->
+<!-- This brings in jquery.js and bootstrap.js as dependencies. -->
+<!-- http://twitter.github.io/bootstrap/javascript.html#collapse -->
+<div class="row-fluid faq">
+  <div class="span10 offset1">
+    <h3>Frequently asked questions</h3>
+    <div class="accordion" id="accordion2">
+      <div class="accordion-group">
+        <div class="accordion-heading">
+          <a class="accordion-toggle" data-toggle="collapse"
+             data-parent="#accordion2" href="#collapseOne">
+            What happens to your thought after you post it?
+          </a>
+        </div>
+        <div id="collapseOne" class="accordion-body collapse">
+          <div class="accordion-inner">
+            It goes into our queue system to be answered directly or be emailed to a responder.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-group">
+        <div class="accordion-heading">
+          <a class="accordion-toggle" data-toggle="collapse"
+             data-parent="#accordion2" href="#collapseTwo">
+            What if I receive a thought via email but I don't have the time to answer it?
+          </a>
+        </div>
+        <div id="collapseTwo" class="accordion-body collapse">
+          <div class="accordion-inner">
+            Thoughts sent by email will expire within a certain time and be returned to the queue to ensure that everyone's thoughts are read and responded to.  If you're busy when an thought email is sent to you, you can decline or just not respond and it will be automatically re-queued.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-group">
+        <div class="accordion-heading">
+          <a class="accordion-toggle" data-toggle="collapse"
+             data-parent="#accordion2" href="#collapseThree">
+            What happens if I decide to field a post and click accept in the email?
+          </a>
+        </div>
+        <div id="collapseThree" class="accordion-body collapse">
+          <div class="accordion-inner">
+            An accepted thought must be responded to within 48 hours or it will be re-queued and you will no longer have the ability to respond to that thought.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
